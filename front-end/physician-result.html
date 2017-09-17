@@ -9,11 +9,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 		<!-- Custom styles for this template -->
-		<link href="physician-eeg.css" rel="stylesheet">
 		<link href="physician-result.css" rel="stylesheet">
+		<link href="physician-patients.css" rel="stylesheet">
 		
-		<!-- Plugin CSS -->
-		<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     </head>
 
     <body>
@@ -22,10 +20,13 @@
 			    <nav>
 				  <ul class="nav nav-pills float-right">
 					<li class="nav-item">
-					  <a class="nav-link active" href="physician-patients.html">Patients<span class="sr-only">(current)</span></a>
+					  <a class="nav-link" href="main-page.html">Home</a>
 					</li>
 					<li class="nav-item">
 					  <a class="nav-link" href="physician-eeg.html">Upload EEG</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="physician-patients.html">Patients</a>
 					</li>
 				  </ul>
 				</nav>
@@ -38,27 +39,94 @@
 			<div class="card ">
 				<div class="card-header">General Information</div>
 			  <div class="card-body">
-				<p class="card-text">Name: Olive Yew
-				<br>Age: 18
-				<br>Phone: 604.123.4567
-				<br>Email: oliveyew@lumohacks.com
-				<br>Last visit: 09/17/2017</p>
+				<table class="table table-default">
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td>Olive Yew</td>
+                      </tr>
+                      <tr>
+                        <td>Date of Birth</td>
+                        <td>02/20/2000</td>
+                      </tr>
+                        <td>Phone</td>
+                        <td>604.123.4567 (Mobile)</a></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td>oliveyew@lumohacks.com</td>
+                      </tr>
+                   
+                        
+                       <tr>
+                        <td>Home Address</td>
+                        <td>Vancouver, BC</td>
+                      </tr>
+					  <tr>
+                        <td>Last Visit</td>
+                        <td>09/17/2017</td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                 </table>
+			  
 			  </div>
 			</div>
 			
-			
+		<div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i>
+            EEG Results
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped" width="100%" id="dataTable" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Result</th>
+                    <th>Comments</th>
+					<th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09/17/2017</td>
+                    <td>Healthy</td>
+					<td></td>
+					<td><a href="javascript:setImageVisible('eeg-h', true)">show</a> |
+						<a href="javascript:setImageVisible('eeg-h', false)">hide</a>
+
+                  </tr>
+				  <tr>
+                    <td>08/19/2017</td>
+                    <td>Abnormal</td>
+					<td></td>
+					<td><a href="javascript:setImageVisible('eeg-ab', true)">show</a> |
+						<a href="javascript:setImageVisible('eeg-ab', false)">hide</a>
+
+                  </tr>
+				  <tr></tr>
+				  
+                  
+                </tbody>
+              </table>
+			  <img id="eeg-h" class="eeg-img" style="display: none;" 
+			  src="/images/eeg-healthy.PNG">
+			  <img id="eeg-ab" class="eeg-img" style="display: none;" 
+			  src="/images/eeg-abn.PNG">
+            </div>
+          </div>
+        </div>
 			  
-		<!-- Area Chart Example -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-area-chart"></i>
             Survey Trends
           </div>
           <div class="card-body">
-            <img src="/images/pt-trend.png">
-          </div>
-          <div class="card-footer small text-muted">
-            Updated today at 11:59 AM
+            <img class="img-fluid" src="http://mind-detect.org.s3-website.ca-central-1.amazonaws.com/images/pt-trend.PNG" />
           </div>
         </div>
 		
@@ -115,14 +183,22 @@
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">
-            Updated today at 11:59 AM
-          </div>
         </div>
 		
 		
 		</div>
-		
+		<script>
+		function setImageVisible(id, visible) {
+			
+			var img = document.getElementById(id);
+			var imgs = document.getElementsByClassName("eeg-img");
+			for (i = 0; i < imgs.length; i++) {
+				imgs[i].style.display = 'none';
+			}
+			
+			img.style.display = (visible ? '' : 'none');
+		}
+		</script>
 		
     </body>
 	

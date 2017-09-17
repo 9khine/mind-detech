@@ -10,3 +10,8 @@ h4 {
 	background-color: #1d85e7;
 	color: #ffffff;
 }
+
+.img-fluid {
+	max-width: 100%; 
+	height: auto;
+}
