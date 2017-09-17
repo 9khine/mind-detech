@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Mind Detect - Physicians</title>
+
+        <!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+		<!-- Custom styles for this template -->
+		<link href="physician-patients.css" rel="stylesheet">
+    </head>
+
+    <body>
+		<div class="container">
+		    <div class="header clearfix">
+			    <nav>
+				  <ul class="nav nav-pills float-right">
+					<li class="nav-item">
+					  <a class="nav-link active" href="physician-patients.html">Patients<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="physician-eeg.html">Upload EEG</a>
+					</li>
+				  </ul>
+				</nav>
+				
+				<h3 class="text-muted">Welcome Dr. Beck!</h3>
+			</div>
+			
+			<h4>Patient Information</h4>
+			<div class="form-group">
+				<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped" id="patients">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>Name</th>
+					  <th>Last Assessment</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td><a href="#">001</a></td>
+					  <td class='pt-name'>Al Bino</td>
+					  <td>09/10/2017</td>
+					</tr>
+					<tr>
+					  <td><a href="#">002</a></td>
+					  <td class='pt-name'>Brock Lee</td>
+					  <td>09/13/2017</td>
+					</tr>
+					<tr>
+					  <td><a href="#">003</a></td>
+					  <td class='pt-name'>Olive Yew</td>
+					  <td>09/17/2017</td>
+					  </a>
+					</tr>
+					<tr>
+					  <td><a href="#">004</a></td>
+					  <td class='pt-name'>Sno White</td>
+					  <td>09/02/2017</td>
+					</tr>
+					<tr>
+					  <td><a href="#">005</a></td>
+					  <td class='pt-name'>Tom Morrow</td>
+					  <td>06/08/2017</td>
+					</tr>
+					
+				  </tbody>
+				</table>
+			</div>
+		</div>
+		
+		<script>
+		function myFunction() {
+			var input, filter, table, td, a, i;
+			input = document.getElementById('myInput');
+			filter = input.value.toUpperCase();
+			table = document.getElementById('patients');
+			td = table.getElementsByClassName('pt-name');
+			
+
+			// Loop through all list items, and hide those who don't match the search query
+			for (i = 0; i < td.length; i++) {
+				current = td[i];
+				if (current.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					td[i].parentElement.style.visibility = ""
+					td[i].parentElement.style.lineHeight = "";
+				} else {
+					td[i].parentElement.style.visibility = "collapse"
+					td[i].parentElement.style.lineHeight = "0";
+				}
+			}
+		}
+		</script>
+    </body>
+	
+</html>
