@@ -1,91 +1,87 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Mental Health Q</title>
-      <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-      <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-      <link href="physician-eeg.css" rel="stylesheet">
-      <link href="medal.css" rel="stylesheet">
-   </head>
-   <body>
-      <div class="container">
-         <div class="header clearfix">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health Q</title>
+    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link href="physician-eeg.css" rel="stylesheet">
+    <link href="medal.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
             <nav>
-               <ul class="nav nav-pills float-right">
-                  <li class="nav-item">
-					  <a class="nav-link" href="main-page.html">Home</a>
-					</li>
-					<li class="nav-item">
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main-page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" href="medal.html">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="individual.html">Questionnaire<span class="sr-only">(current)</span></a>
                     </li>
-               </ul>
+                </ul>
             </nav>
             <h3 class="text-muted">Welcome Olive!</h3>
-         </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">User Profile</div>
+            <div class="card-body">
+                <table class="table table-default">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>Olive Yew</td>
+                        </tr>
+                        <tr>
+                            <td>Physician Name</td>
+                            <td>Dr. Beck</td>
+                        </tr>
+                        <td>Physician Address</td>
+                        <td>Baker Street</td>
+                        </tr>
+                        <tr>
+                            <td>Date Of Joining</td>
+                            <td>17 July 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Last Login</td>
+                            <td>17 Sept 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Total Assessments</td>
+                            <td>4</td>
 
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h4 >User Profile</h4>
-         </div>
-         <div class="panel-body">
-            <div class="box box-info">
-               <div class="box-body">
+                        </tr>
+                    </tbody>
+                </table>
 
-                  <div class="clearfix"></div>
-                  <hr style="margin:5px 0 5px 0;">
-
-                  <div class="col-sm-5 col-xs-6 tital " >User Name:</div>
-                  <div class="col-sm-7"> Dr. Beck</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div>
-                  <div class="col-sm-5 col-xs-6 tital " >Physician Name:</div>
-                  <div class="col-sm-7">Olive Yew</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div>
-                  <div class="col-sm-5 col-xs-6 tital " >Physician Address:</div>
-                  <div class="col-sm-7">Baker Street</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div>
-                  <div class="col-sm-5 col-xs-6 tital " >Date Of Joining:</div>
-                  <div class="col-sm-7">17 July 2017</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div>
-                  <div class="col-sm-5 col-xs-6 tital " >Last Login:</div>
-                  <div class="col-sm-7">17 Sept 2017</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div>
-                  <div class="col-sm-5 col-xs-6 tital " >Total Assessment:</div>
-                  <div class="col-sm-7">3</div>
-                  <div class="clearfix"></div>
-                  <div class="bot-border"></div><br>
-
-                  <!-- /.box-body -->
-               </div>
-               <!-- /.box -->
             </div>
+        </div>
+		
+		<h2>You are on a 6 week streak!</h2>
 
-         </div>
-      </div>
-      </div>
-      </div>
-      </div> 
-      </body> 
-      <h2>You are on a 6 week streak!</h2>
-   
-      <img src="medal.png" alt="medal">
+		<img src="medal.png" alt="medal">
+        
+    </div>
+    </div>
+    </div>
+</body>
 
-      
-      <script>
-         $(function() {
-         $('#profile-image1').on('click', function() {
-         $('#profile-image-upload').click();
-         });
-         });       
-      </script> 
-      </div>
+
+
+<script>
+    $(function() {
+        $('#profile-image1').on('click', function() {
+            $('#profile-image-upload').click();
+        });
+    });
+</script>
+</div>
+
 </html>
