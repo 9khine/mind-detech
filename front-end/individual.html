@@ -4,26 +4,48 @@
   <meta charset="UTF-8">
   <title>Mental Health Q</title>
   <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+  
 <link rel='stylesheet' href='custom.css'>
-<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
 
-      <link rel="stylesheet" href="css/style.css">
+
+      
 
   
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
+	<div class="header clearfix">
+			    <nav>
+				  <ul class="nav nav-pills float-right">
+					<li class="nav-item">
+					  <a class="nav-link active" href="#">Questionnaire<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">Medals</a>
+					</li>
+				  </ul>
+				</nav>
+				
+				<h3 class="text-muted">Welcome Olive!</h3>
+	</div>
+	</div>
+  <div class="container" id="form">
+		    
 
     <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
-<!-- Form Name -->
+
+<!-- Form adopted from Anderson, J. E., E. E. Michalak, and R. W. Lam. 
+"Depression in primary care: Tools for screening, diagnosis, and measuring response to treatment." 
+British Columbia Medical Journal 44.8 (2002): 415-419-->
 <legend>Mental Health Questionnaire</legend>
 
 <!-- Text input-->
@@ -37,11 +59,11 @@
   </div>
 </div>
 <div>
-<label class="col-md-4 control-label">Over the last 2 weeks, how often have you been bothered by any of the following problems?</label> 
+<h5>Over the last 2 weeks, how often have you been bothered by any of the following problems?</h5> 
 </div>
 <div class="form-group">
-  <label class="col-md-4 control-label">1. Little interest or pleasure in doing things</label>  
-                          <div class="col-md-4">
+  <label class="col-md-4">1. Little interest or pleasure in doing things</label>  
+                          <div class="col-md-8">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="one" value=1 /> Not at all
@@ -60,8 +82,8 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">2. Feeling down, depressed, or hopeless.</label>  
-                          <div class="col-md-4">
+  <label class="col-md-4">2. Feeling down, depressed, or hopeless.</label>  
+                          <div class="col-md-8">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="two" value="1" /> Not at all
@@ -80,8 +102,8 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">3. Trouble falling/staying asleep, sleeping too much.</label>  
-                          <div class="col-md-4">
+  <label class="col-md-4">3. Trouble falling/staying asleep, sleeping too much.</label>  
+                          <div class="col-md-8">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="three" value="1" id="three_one"/> Not at all
@@ -100,8 +122,8 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">4. Feeling tired or having little energy.</label>  
-                          <div class="col-md-4">
+  <label class="col-md-4">4. Feeling tired or having little energy.</label>  
+                          <div class="col-md-8">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="four" value="1" id="four_one"/> Not at all
@@ -119,9 +141,9 @@
                         </div>
 </div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label">5. Poor appetite or overeating.</label>  
-                          <div class="col-md-4">
+<div class="form-group"	>
+  <label class="col-md-4">5. Poor appetite or overeating.</label>  
+                          <div class="col-md-8">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="five" value="1" id="five_one"/> Not at all
@@ -139,7 +161,7 @@
                         </div>
 </div>
 
-<h6><small>adpoted from Anderson, J. E., E. E. Michalak, and R. W. Lam. "Depression in primary care: Tools for screening, diagnosis, and measuring response to treatment." British Columbia Medical Journal 44.8 (2002): 415-419.</small></h6>
+
 
 <!-- Success message -->
 <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
