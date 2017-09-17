@@ -8,6 +8,7 @@
 
   
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='custom.css'>
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
 
@@ -27,116 +28,118 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" >Full Name</label> 
+  <label class="col-md-4 control-label">Full Name</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="last_name" placeholder="Full Name" class="form-control"  type="text">
+  <input name="full_name" placeholder="Full Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
-
+<div>
+<label class="col-md-4 control-label">Over the last 2 weeks, how often have you been bothered by any of the following problems?</label> 
+</div>
 <div class="form-group">
-  <label class="col-md-4 control-label">1.Little interest or pleasure in doing things</label>  
+  <label class="col-md-4 control-label">1. Little interest or pleasure in doing things</label>  
                           <div class="col-md-4">
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="hosting" value="1" /> Not at all
+                                    <input type="radio" name="one" value=1 /> Not at all
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="2" /> Several days
+                                    <input type="radio" name="one" value=2 /> Several days
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="3" /> More than half the days
+                                    <input type="radio" name="one" value=3 /> More than half the days
                                 </label>
                                  <label>
-                                    <input type="checkbox" name="hosting" value="4" /> Nearly everyday
+                                    <input type="radio" name="one" value=4 /> Nearly everyday
                                 </label>
                             </div>
                         </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">2.Feeling down, depressed, or hopeless.</label>  
+  <label class="col-md-4 control-label">2. Feeling down, depressed, or hopeless.</label>  
                           <div class="col-md-4">
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="hosting" value="1" /> Not at all
+                                    <input type="radio" name="two" value="1" /> Not at all
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="2" /> Several days
+                                    <input type="radio" name="two" value="2" /> Several days
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="3" /> More than half the days
+                                    <input type="radio" name="two" value="3" /> More than half the days
                                 </label>
                                  <label>
-                                    <input type="checkbox" name="hosting" value="4" /> Nearly everyday
+                                    <input type="radio" name="two" value="4" /> Nearly everyday
                                 </label>
                             </div>
                         </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">3.Trouble falling/staying asleep, sleeping too much.</label>  
+  <label class="col-md-4 control-label">3. Trouble falling/staying asleep, sleeping too much.</label>  
                           <div class="col-md-4">
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="hosting" value="1" /> Not at all
+                                    <input type="radio" name="three" value="1" id="three_one"/> Not at all
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="2" /> Several days
+                                    <input type="radio" name="three" value="2" id="three_two"/> Several days
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="3" /> More than half the days
+                                    <input type="radio" name="three" value="3" id="three_three"/> More than half the days
                                 </label>
                                  <label>
-                                    <input type="checkbox" name="hosting" value="4" /> Nearly everyday
+                                    <input type="radio" name="three" value="4" id="three_four"/> Nearly everyday
                                 </label>
                             </div>
                         </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">4.Feeling tired or having little energy.</label>  
+  <label class="col-md-4 control-label">4. Feeling tired or having little energy.</label>  
                           <div class="col-md-4">
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="hosting" value="1" /> Not at all
+                                    <input type="radio" name="four" value="1" id="four_one"/> Not at all
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="2" /> Several days
+                                    <input type="radio" name="four" value="2" id="four_two"/> Several days
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="3" /> More than half the days
+                                    <input type="radio" name="four" value="3" id="four_three"/> More than half the days
                                 </label>
                                  <label>
-                                    <input type="checkbox" name="hosting" value="4" /> Nearly everyday
+                                    <input type="radio" name="four" value="4" id="four_four"/> Nearly everyday
                                 </label>
                             </div>
                         </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">5.Poor appetite or overeating.</label>  
+  <label class="col-md-4 control-label">5. Poor appetite or overeating.</label>  
                           <div class="col-md-4">
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="hosting" value="1" /> Not at all
+                                    <input type="radio" name="five" value="1" id="five_one"/> Not at all
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="2" /> Several days
+                                    <input type="radio" name="five" value="2" id="five_two"/> Several days
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="hosting" value="3" /> More than half the days
+                                    <input type="radio" name="five" value="3" id="five_three"/> More than half the days
                                 </label>
                                  <label>
-                                    <input type="checkbox" name="hosting" value="4" /> Nearly everyday
+                                    <input type="radio" name="five" value="4" id="five_four"/> Nearly everyday
                                 </label>
                             </div>
                         </div>
 </div>
 
-
+<h6><small>adpoted from Anderson, J. E., E. E. Michalak, and R. W. Lam. "Depression in primary care: Tools for screening, diagnosis, and measuring response to treatment." British Columbia Medical Journal 44.8 (2002): 415-419.</small></h6>
 
 <!-- Success message -->
 <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
@@ -145,10 +148,16 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <button onclick="myFunction(); return false;"  type="submit" class="btn btn-warning" >Send</button>
   </div>
 </div>
 
+<div class="form-group">
+<label class="col-md-4 control-label">Total Score: </label> 
+<h id="demo" />
+</div>
+
+<script src= "addition.js"></script>
 </fieldset>
 </form>
 </div>
@@ -161,3 +170,5 @@
 
 </body>
 </html>
+
+

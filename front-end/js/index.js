@@ -17,13 +17,13 @@
                     }
                 }
             },
-             last_name: {
+             full_name: {
                 validators: {
                      stringLength: {
                         min: 2,
                     },
                     notEmpty: {
-                        message: 'Please supply your last name'
+                        message: 'Please supply your full name'
                     }
                 }
             },
