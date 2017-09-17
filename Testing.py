@@ -11,6 +11,7 @@ from scipy.interpolate import interp1d
 import itertools
 import numpy as np
 from sklearn import preprocessing
+from sklearn.externals import joblib
 
 # Input data files are available in the "../input/" directory.
 # For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
@@ -20,7 +21,6 @@ from subprocess import check_output
 # print(check_output(["ls", "../input"]).decode("utf8"))
 
 # Any results you write to the current directory are saved as output.
-df = pd.read_csv("../EEG_Prediction/input/input_file.csv")
 
 def cross_val_svm(X, y, n):
     clf = svm.SVC()
@@ -86,10 +86,6 @@ def estimated_accuracy(subject):
     return cross_val_svm(X, y, 7).mean()
 
 
-# convert to arrays from strings
-df.raw_values = df.raw_values.map(json.loads)
-df.eeg_power = df.eeg_power.map(json.loads)
-
 # relax = df[df.label == 'relax']
 # math = df[(df.label == 'math1') |
 #           (df.label == 'math2') |
@@ -104,16 +100,30 @@ df.eeg_power = df.eeg_power.map(json.loads)
 #           (df.label == 'math11') |
 #           (df.label == 'math12')]
 
-X = df.eeg_power.tolist()
+def main():
 
-ex_readings = df.raw_values[:3]
+    df = pd.read_csv("../mind-detech/input/input_file.csv")
 
-feature_vector(ex_readings)
+    # convert to arrays from strings
+    df.raw_values = df.raw_values.map(json.loads)
+    df.eeg_power = df.eeg_power.map(json.loads)
 
-X = feature_vector(ex_readings)
-X = X.reshape(1,-1)
-from sklearn.externals import joblib
+    X = df.eeg_power.tolist()
 
-clf2 = joblib.load("../EEG_Prediction/Test.pkl")
-print(clf2.predict(X))
+    ex_readings = df.raw_values[:3]
 
+    feature_vector(ex_readings)
+
+    X = feature_vector(ex_readings)
+    X = X.reshape(1,-1)
+
+    clf2 = joblib.load("../mind-detech/Test.pkl")
+    #print(clf2.predict(X))
+
+    # !!!!! True means NOT Depress
+    if(clf2.predict(X) == 1):
+        print(True)
+    else:
+        print(False)
+
+main()
