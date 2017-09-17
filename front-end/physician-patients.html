@@ -34,7 +34,7 @@
 			
 			<h4>Patient Information</h4>
 			<div class="form-group">
-				<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+				<input type="text" id="myInput" onkeyup="searchName()" placeholder="Search by name...">
 			</div>
 			<div class="table-responsive">
 				<table class="table table-striped" id="patients">
@@ -79,7 +79,7 @@
 		</div>
 		
 		<script>
-		function myFunction() {
+		function searchName() {
 			var input, filter, table, td, a, i;
 			input = document.getElementById('myInput');
 			filter = input.value.toUpperCase();

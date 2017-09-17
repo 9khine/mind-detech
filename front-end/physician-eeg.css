@@ -47,7 +47,9 @@ body {
 }
 
 
-
+h4 {
+	padding-bottom: 1rem;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
