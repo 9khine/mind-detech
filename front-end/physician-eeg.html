@@ -37,6 +37,7 @@
 				<h3 class="text-muted">Welcome Dr. Beck!</h3>
 			</div>
 			
+			
 			<h4>Upload EEG</h4>
 			<div class="form-group">
 				<label for="name"></label> 
@@ -49,10 +50,39 @@
 				<small id="fileHelp" class="form-text text-muted">Upload EEG file here.</small>
 			
 			</div>
+			<button onclick="myFunction(0)" class="btn btn-primary">Submit 0</button>
+			<button onclick="myFunction(1)" class="btn btn-primary">Submit 1</button>
 			
 			
-	
-			<button'  class="btn btn-primary">Submit</button>
+			
+				  <h5 id="resulth" style="padding-top: 2rem;"></h5>
+				  <p id="resultd"></p>
+				  <img id="eeg-h" class="eeg-img" style="display: none;" src="images/eeg-healthy.PNG">
+				  <img id="eeg-ab" class="eeg-img" style="display: none;" src="images/eeg-abn.PNG">
+			
+			</div>	
+		
+			
+			
+			<script>
+			function myFunction(val) {
+				var name = document.getElementById('name');
+				var resh = document.getElementById('resulth');
+				var resd = document.getElementById('resultd');
+				var imgh = document.getElementById('eeg-h');
+				var imgab = document.getElementById('eeg-ab');
+				
+				resh.innerHTML = "Results for: " + name.value;
+				if (val == 0) {
+					resd.innerHTML = "Suspected depression";
+					imgab.style.display = "";
+				} else {
+					resd.innerHTML = "Suspected healthy";
+					imgh.style.display = "";
+				}
+				
+			}
+			</script>
 
 		
 			

@@ -22,7 +22,9 @@ body {
   line-height: 3rem;
 }
 
-
+.mb3 {
+	padding-top: 2rem;
+}
 /* Customize container */
 @media (min-width: 48em) {
   .container {
